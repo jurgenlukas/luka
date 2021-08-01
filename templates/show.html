@@ -1,0 +1,36 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %}
+{% load static %}
+
+<!-- 写入 base.html 中定义的 title -->
+{% block title %}
+    文章详情
+{% endblock title %}
+
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+
+<!-- 文章详情 -->
+<div class="container">
+    <div class="row">
+        <!-- 标题及作者 -->
+        <h1 class="col-12 mt-4 mb-4">代码：    {{ dic.code }}</h1>
+        <div class="col-12 alert alert-success">K线分钟：<p>{{ dic.kmin }}</p></div>
+        <div class="col-12 alert alert-success">数据组数：<p>{{ dic.datanum }}</p>
+            <br>
+
+        </div>
+        <!-- 文章正文 -->
+
+</div>
+
+
+                <img src='../media/{{dic.code}}.png'
+                width="1000" height="600"
+                     style="max-width:100%; border-radius: 20px"
+                >
+
+
+</div>
+
+{% endblock content %}
